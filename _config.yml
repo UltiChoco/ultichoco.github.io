@@ -7,7 +7,7 @@
 
 # Site Settings
 title                    : "Yixu Liu"
-description              : "Personal academic homepage of Yixu Liu. "
+description              : 
 repository               : "UltiChoco/ultichoco.github.io"
 google_scholar_stats_use_cdn : true
 
@@ -23,9 +23,9 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 author:
   name             : "Yixu Liu"
   avatar           : "images/android-chrome-512x512.png"
-  bio              : "Undergraduate Student in Computer Science | Audio & Speech Processing"
+  bio              : "Undergraduate Student in Computer Science"
   location         : "Shenzhen, China"
-  employer         : "Southern University of Science and Technology"
+  employer         : 
   pubmed           : 
   googlescholar    : 
   email            : "yixu.liu@outlook.com"
