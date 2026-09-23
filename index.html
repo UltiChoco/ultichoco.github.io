@@ -3,266 +3,107 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Yixu Liu</title>
-  <meta
-    name="description"
-    content="Personal homepage of Yixu Liu, an undergraduate student in Computer Science at SUSTech."
-  >
-
+  <meta name="description" content="Personal homepage of Yixu Liu, an undergraduate researcher in computer science and speech processing at SUSTech.">
+  <meta name="theme-color" content="#f7f9fc">
+  <title>Yixu Liu · SUSTech</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d4ed8'/%3E%3Cpath d='M14 16h9l9 15 9-15h9L36 39v10h-8V39z' fill='white'/%3E%3C/svg%3E">
   <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-      line-height: 1.65;
-      color: #222;
-      background: #fff;
-      margin: 0;
-    }
-
-    .container {
-      max-width: 850px;
-      margin: 0 auto;
-      padding: 55px 25px 80px;
-    }
-
-    a {
-      color: #1772d0;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    h1 {
-      font-size: 2.1rem;
-      font-weight: 500;
-      margin: 0 0 8px;
-    }
-
-    h2 {
-      font-size: 1.35rem;
-      font-weight: 500;
-      margin-top: 42px;
-      margin-bottom: 14px;
-      padding-bottom: 5px;
-      border-bottom: 1px solid #ddd;
-    }
-
-    p {
-      margin: 8px 0;
-    }
-
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 40px;
-    }
-
-    .intro {
-      flex: 1;
-    }
-
-    .photo {
-      width: 170px;
-      height: 170px;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-
-    .links {
-      margin-top: 15px;
-    }
-
-    .links a {
-      margin-right: 16px;
-    }
-
-    .item {
-      margin-bottom: 20px;
-    }
-
-    .item-title {
-      font-weight: 600;
-    }
-
-    .item-meta {
-      color: #666;
-      font-size: 0.95rem;
-    }
-
-    ul {
-      padding-left: 22px;
-      margin-top: 8px;
-    }
-
-    li {
-      margin: 5px 0;
-    }
-
-    footer {
-      margin-top: 55px;
-      padding-top: 15px;
-      border-top: 1px solid #ddd;
-      color: #888;
-      font-size: 0.85rem;
-      text-align: center;
-    }
-
-    @media (max-width: 650px) {
-      .container {
-        padding-top: 30px;
-      }
-
-      .header {
-        flex-direction: column-reverse;
-        align-items: flex-start;
-        gap: 20px;
-      }
-
-      .photo {
-        width: 140px;
-        height: 140px;
-      }
-    }
+    :root{--ink:#162033;--muted:#657084;--accent:#1d4ed8;--soft:#eaf0ff;--line:#dce3ee;--paper:#fff;--bg:#f7f9fc}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}
+    body{margin:0;color:var(--ink);background:radial-gradient(circle at 85% 0%,rgba(29,78,216,.08),transparent 26rem),var(--bg);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:1rem;line-height:1.7;-webkit-font-smoothing:antialiased}
+    a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}a:hover{color:#153dab}a:focus-visible{outline:3px solid rgba(29,78,216,.25);outline-offset:3px;border-radius:3px}
+    .page{width:min(100% - 40px,960px);margin:56px auto;overflow:hidden;background:var(--paper);border:1px solid rgba(220,227,238,.9);border-radius:22px;box-shadow:0 18px 55px rgba(25,43,77,.08)}
+    .hero{display:grid;grid-template-columns:minmax(0,1fr) 190px;gap:52px;align-items:center;padding:60px 64px 52px;border-bottom:1px solid var(--line)}
+    .eyebrow{margin:0 0 8px;color:var(--accent);font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+    h1{margin:0 0 22px;font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.7rem,7vw,4.3rem);font-weight:500;letter-spacing:-.045em;line-height:1}
+    .intro p{max-width:650px;margin:0 0 14px;color:#354056}
+    .profile-photo{display:block;width:190px;aspect-ratio:1;object-fit:cover;border:7px solid #fff;border-radius:50%;box-shadow:0 0 0 1px var(--line),0 14px 34px rgba(22,32,51,.14)}
+    .contact-links{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}.contact-links a{display:inline-flex;align-items:center;min-height:40px;padding:7px 13px;color:#263148;background:var(--bg);border:1px solid var(--line);border-radius:999px;font-size:.9rem;font-weight:600;text-decoration:none;transition:.16s ease}.contact-links a:hover{color:var(--accent);border-color:#aebde1;transform:translateY(-1px)}
+    main{padding:12px 64px 58px}section{display:grid;grid-template-columns:190px minmax(0,1fr);gap:32px;padding:38px 0;border-bottom:1px solid var(--line)}section:last-child{border-bottom:0}
+    h2{margin:2px 0 0;font-size:.82rem;font-weight:750;letter-spacing:.1em;line-height:1.5;text-transform:uppercase}.section-content>:first-child{margin-top:0}.section-content>:last-child{margin-bottom:0}
+    .interest-list,.simple-list{margin:0;padding:0;list-style:none}.interest-list{display:flex;flex-wrap:wrap;gap:10px}.interest-list li{padding:7px 12px;color:#29406d;background:var(--soft);border-radius:7px;font-size:.92rem;font-weight:600}
+    .entry+.entry{margin-top:28px}.entry-heading{display:flex;justify-content:space-between;gap:24px;align-items:baseline}h3{margin:0;font-size:1.05rem;font-weight:700;line-height:1.45}.entry-date{flex:0 0 auto;color:var(--muted);font-size:.88rem;font-weight:600}.entry-subtitle,.entry p{margin:5px 0 0;color:var(--muted)}.entry p{color:#3d485d}
+    .stats{display:flex;flex-wrap:wrap;gap:9px 20px;margin-top:12px;color:#263148;font-size:.92rem;font-weight:650}.simple-list li{position:relative;padding-left:20px}.simple-list li::before{position:absolute;left:0;color:var(--accent);content:"•";font-weight:800}.simple-list li+li{margin-top:13px}.award-name{font-weight:650}.award-meta{display:block;color:var(--muted);font-size:.9rem}
+    .activity-list{display:grid;gap:14px}.activity{padding:18px 20px;background:var(--bg);border:1px solid var(--line);border-radius:12px}.activity h3{margin-bottom:8px}.activity ul{margin:0;padding-left:20px;color:#3d485d}.activity li+li{margin-top:5px}
+    footer{padding:20px 64px;color:var(--muted);background:#fbfcfe;border-top:1px solid var(--line);font-size:.82rem;text-align:center}
+    @media(max-width:760px){.page{width:min(100% - 24px,960px);margin:12px auto;border-radius:16px}.hero{grid-template-columns:1fr;gap:28px;padding:40px 28px 36px}.profile-photo{grid-row:1;width:130px}main{padding:4px 28px 42px}section{grid-template-columns:1fr;gap:18px;padding:30px 0}h2{color:var(--accent)}footer{padding:18px 28px}}
+    @media(max-width:480px){h1{font-size:2.65rem}.hero,main{padding-right:22px;padding-left:22px}.contact-links{display:grid}.contact-links a{justify-content:center;text-align:center}.entry-heading{display:block}.entry-date{display:block;margin-top:3px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.contact-links a{transition:none}}
   </style>
 </head>
-
 <body>
-
-<div class="container">
-
-  <!-- ==================== Header ==================== -->
-
-  <div class="header">
-
-    <div class="intro">
-      <h1>Yixu Liu</h1>
-
-      <p>
-        Undergraduate student in Computer Science and Technology at
-        <a href="https://www.sustech.edu.cn/en/" target="_blank">
-          Southern University of Science and Technology (SUSTech)
-        </a>.
-      </p>
-
-      <p>
-        My research interests lie in
-        <strong>audio and speech signal processing</strong>,
-        with a particular focus on deep learning methods for
-        speech separation, dereverberation, and denoising.
-      </p>
-
-      <div class="links">
-        <a href="mailto:12410148@mail.sustech.edu.cn">Email</a>
-        <a href="https://github.com/UltiChoco" target="_blank">GitHub</a>
+  <div class="page">
+    <header class="hero">
+      <div class="intro">
+        <p class="eyebrow">Computer Science · Speech Processing</p>
+        <h1>Yixu Liu</h1>
+        <p>I'm Yixu Liu (刘以煦), an undergraduate student in the <a href="https://cse.sustech.edu.cn/en/" target="_blank" rel="noopener noreferrer">Department of Computer Science and Engineering</a> at <a href="https://www.sustech.edu.cn/en/" target="_blank" rel="noopener noreferrer">Southern University of Science and Technology (SUSTech)</a>.</p>
+        <p>My research focuses on <strong>audio and speech signal processing</strong>, particularly DNN methods for speech separation, dereverberation, and denoising. I am currently supervised by Prof. <a href="https://zqwang7.github.io/" target="_blank" rel="noopener noreferrer">Zhong-Qiu Wang</a>.</p>
+        <nav class="contact-links" aria-label="Contact links">
+          <a href="mailto:12410148@mail.sustech.edu.cn">SUSTech Email</a>
+          <a href="mailto:yixu.liu@outlook.com">Outlook Email</a>
+          <a href="https://github.com/UltiChoco" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </nav>
       </div>
-    </div>
-
-    <!--
-      Put your profile photo in the repository root
-      and name it profile.jpg.
-    -->
-    <img
-      class="photo"
-      src="profile.jpg"
-      alt="Yixu Liu"
-      onerror="this.style.display='none'"
-    >
-
+      <img class="profile-photo" src="profile.jpg" alt="Portrait of Yixu Liu" width="190" height="190">
+    </header>
+    <main>
+      <section aria-labelledby="interests-heading">
+        <h2 id="interests-heading">Research Interests</h2>
+        <div class="section-content"><ul class="interest-list">
+          <li>Audio &amp; Speech Signal Processing</li><li>Speech Separation</li><li>Dereverberation &amp; Denoising</li><li>Deep Learning for Speech Processing</li>
+        </ul></div>
+      </section>
+      <section aria-labelledby="education-heading">
+        <h2 id="education-heading">Education</h2>
+        <div class="section-content"><article class="entry">
+          <div class="entry-heading"><h3><a href="https://www.sustech.edu.cn/en/" target="_blank" rel="noopener noreferrer">Southern University of Science and Technology</a></h3><span class="entry-date">2024–Present</span></div>
+          <p class="entry-subtitle">B.Eng. in Computer Science and Technology · Shenzhen, China</p>
+          <div class="stats" aria-label="Academic statistics"><span>GPA: 3.95 / 4.0</span><span>Rank: 3 / 171</span></div>
+        </article></div>
+      </section>
+      <section aria-labelledby="research-heading">
+        <h2 id="research-heading">Research Experience</h2>
+        <div class="section-content"><article class="entry">
+          <h3>Unsupervised Speech Separation, Dereverberation and Denoising</h3>
+          <p>I am currently working on deep-learning-based methods for unsupervised joint speech separation, dereverberation, and denoising from noisy reverberant speech mixtures.</p>
+          <p><a href="https://ultichoco.github.io/demos/PriSep_demo/index.html">Sound Demo →</a></p>
+        </article></div>
+      </section>
+      <section aria-labelledby="honors-heading">
+        <h2 id="honors-heading">Honors &amp; Awards</h2>
+        <div class="section-content"><ul class="simple-list">
+          <li><span class="award-name">Runner-up, Advanced Track</span><span class="award-meta">SUSTech Supercomputing Competition · 2025</span></li>
+          <li><span class="award-name">Outstanding Student Scholarship, First Prize</span><span class="award-meta">Southern University of Science and Technology · 2025</span></li>
+        </ul></div>
+      </section>
+      <section aria-labelledby="activities-heading">
+        <h2 id="activities-heading">Activities</h2>
+        <div class="section-content activity-list">
+          <article class="activity">
+            <h3>Badminton</h3>
+            <ul>
+              <li>Runner-up in Women's Singles, 2025 SUSTech Freshman Cup</li>
+              <li>Team Runner-up, 2025 College of Engineering Cup</li>
+            </ul>
+          </article>
+          <article class="activity">
+            <h3>Ultimate Frisbee</h3>
+            <ul>
+              <li>Fifth Place, 2025 Guangdong Provincial University Ultimate Championship</li>
+            </ul>
+          </article>
+          <article class="activity">
+            <h3>Track &amp; Field</h3>
+            <ul>
+              <li>Women's Shot Put Champion, SUSTech Track and Field Games, 2024 &amp; 2025</li>
+              <li>Third Place in Women's Long Jump, SUSTech Track and Field Games, 2025</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer>Last updated: September 2026</footer>
   </div>
-
-
-  <!-- ==================== Research Interests ==================== -->
-
-  <h2>Research Interests</h2>
-
-  <ul>
-    <li>Audio and Speech Signal Processing</li>
-    <li>Speech Separation</li>
-    <li>Speech Dereverberation and Denoising</li>
-    <li>Deep Learning for Speech Processing</li>
-  </ul>
-
-
-  <!-- ==================== Education ==================== -->
-
-  <h2>Education</h2>
-
-  <div class="item">
-    <div class="item-title">
-      Southern University of Science and Technology (SUSTech)
-    </div>
-
-    <div class="item-meta">
-      Shenzhen, China
-    </div>
-
-    <p>
-      B.Eng. student in Computer Science and Technology
-    </p>
-  </div>
-
-
-  <!-- ==================== Research ==================== -->
-
-  <h2>Research Experience</h2>
-
-  <div class="item">
-    <div class="item-title">
-      Unsupervised Speech Separation, Dereverberation and Denoising
-    </div>
-
-    <p>
-      I am currently working on deep-learning-based methods for
-      unsupervised joint speech separation, dereverberation, and
-      denoising from noisy reverberant speech mixtures.
-    </p>
-
-    <!--
-    When your PriSep sound demo is ready, remove the comment symbols
-    around the line below.
-
-    <p>
-      <a href="/prisep/">[Sound Demo]</a>
-    </p>
-    -->
-  </div>
-
-
-  <!-- ==================== Honors ==================== -->
-
-  <h2>Honors & Awards</h2>
-
-  <ul>
-    <li>
-      Runner-up, Advanced Track, SUSTech Supercomputing Competition
-    </li>
-
-    <!-- Add more awards here later -->
-  </ul>
-
-
-  <!-- ==================== Activities ==================== -->
-
-  <h2>Activities</h2>
-
-  <ul>
-    <li>SUSTech Track and Field</li>
-    <li>Badminton</li>
-    <li>Ultimate Frisbee</li>
-    <li>Rowing</li>
-  </ul>
-
-
-  <!-- ==================== Footer ==================== -->
-
-  <footer>
-    Last updated: September 2026
-  </footer>
-
-</div>
-
 </body>
 </html>
